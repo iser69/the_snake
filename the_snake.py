@@ -1,4 +1,3 @@
-
 import pygame
 from random import choice
 
@@ -142,9 +141,7 @@ class Snake(GameObject):
 
         # Затирание последнего сегмента
         if self.last:
-
-
-last_rect = pygame.Rect(self.last, (GRID_SIZE, GRID_SIZE))
+            last_rect = pygame.Rect(self.last, (GRID_SIZE, GRID_SIZE))
             pygame.draw.rect(screen, BOARD_BACKGROUND_COLOR, last_rect)
 
     def get_head_position(self):
@@ -216,5 +213,5 @@ def main():
         clock.tick(SPEED)
 
 
-if name == '__main__':
+if __name__ == '__main__':
     main()
