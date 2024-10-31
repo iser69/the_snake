@@ -1,4 +1,5 @@
-     import pygame
+
+import pygame
 from random import choice
 
 # Константы для размеров поля и сетки:
@@ -141,7 +142,9 @@ class Snake(GameObject):
 
         # Затирание последнего сегмента
         if self.last:
-            last_rect = pygame.Rect(self.last, (GRID_SIZE, GRID_SIZE))
+
+
+last_rect = pygame.Rect(self.last, (GRID_SIZE, GRID_SIZE))
             pygame.draw.rect(screen, BOARD_BACKGROUND_COLOR, last_rect)
 
     def get_head_position(self):
